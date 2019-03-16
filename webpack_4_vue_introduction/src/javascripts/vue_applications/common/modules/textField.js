@@ -2,21 +2,21 @@ const state = () => {
   return {
     value: 'defaultValue',
   };
-}
+};
 
 const getters = {
 
-}
+};
 
 const actions = {
 
-}
+};
 
 const mutations = {
-  setState(state, payload) {
+  setState (state, payload) {
     state[payload.key] = payload.value;
   },
-}
+};
 
 export default {
   // strictとnamespacedをそれぞれtrueにしておきます。
@@ -26,4 +26,4 @@ export default {
   getters,
   actions,
   mutations,
-}
+};

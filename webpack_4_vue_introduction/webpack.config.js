@@ -22,7 +22,13 @@ module.exports = {
         use: [
           {
             loader: "vue-loader"
-          }
+          },
+          {
+            loader: 'eslint-loader',
+            options: {
+              fix: true,
+            },
+          },
         ]
       },
       // 拡張子.jsのファイルに対する設定
@@ -32,6 +38,12 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader',
+          },
+          {
+            loader: 'eslint-loader',
+            options: {
+              fix: true,
+            },
           },
         ]
       },

@@ -1,13 +1,15 @@
 <template>
   <section>
     <h1>TextFieldUnit</h1>
-    <button @click="increment">count: {{ count }}</button>
+    <button @click="increment">
+      count: {{ count }}
+    </button>
     <TextField />
   </section>
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions, mapMutations } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 
 import TextField from '@/javascripts/vue_applications/common/components/TextField';
 export default {
@@ -22,14 +24,14 @@ export default {
   },
   methods: {
     ...mapMutations('textFieldUnit', [
-      'setState'
+      'setState',
     ]),
-    increment() {
+    increment () {
       this.setState({
         key: 'count',
         value: this.count + 1,
       });
     },
-  }
-}
+  },
+};
 </script>

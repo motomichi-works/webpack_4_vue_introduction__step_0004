@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions, mapMutations } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 
 export default {
   name: 'TextField',
@@ -33,14 +33,14 @@ export default {
     ...mapMutations('textFieldUnit/textField', [
       'setState',
     ]),
-    onInput(e) {
+    onInput (e) {
       this.setState({
         key: 'value',
         value: e.target.value,
       });
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
